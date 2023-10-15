@@ -33,6 +33,7 @@ public class TareaController {
 
         tareaFromDb.setNombre(tarea.getNombre());
         tareaFromDb.setCompletado(tarea.isCompletado());
+        tareaFromDb.setDetalle(tarea.getDetalle());
 
         return tareaRepository.save(tareaFromDb);
     }
@@ -46,5 +47,4 @@ public class TareaController {
 
         tareaRepository.delete(tarea);
     }
-
 }
